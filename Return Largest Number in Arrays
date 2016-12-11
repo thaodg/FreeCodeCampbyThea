@@ -1,0 +1,17 @@
+function largestOfFour(arr) {
+  var num = 0;
+  var newarr =[];
+  for(var i = 0; i < arr.length; i++){
+    for(var j = 0; j <arr[i].length; j++){  
+      if (arr[i][j] > num){
+        num = arr[i][j];
+      }
+    }
+    newarr.push(num);
+    num = 0;
+  }
+  // You can do this!
+  return newarr;
+}
+
+largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3]]);
