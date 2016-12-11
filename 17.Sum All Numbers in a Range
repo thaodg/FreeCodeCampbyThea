@@ -1,0 +1,17 @@
+function sumAll(arr) {
+  var minNum = Math.min.apply(null, arr);
+  var maxNum = Math.max.apply(null,arr);
+  var newArr = [];
+  while( minNum  <= maxNum){
+    newArr.push(minNum);
+    minNum ++;
+  }
+  
+  var total = newArr.reduce(function(a,b){
+    return a + b;
+  });
+
+  return total;
+}
+
+sumAll([1, 4]);
