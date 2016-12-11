@@ -1,0 +1,21 @@
+function destroyer(arr) {
+  // Remove all the values
+ //turn arguments into array, starting from the second (1) arg
+ var args = Array.prototype.slice.call(arguments,1);
+  
+ //filter function, return value that doesn't match the arguments
+ function destroyThis(val){
+   for (var i = 0; i < args.length; i ++){  
+     //return args.indexOf(x) === -1;
+     if (val === args[i]){
+       return false;
+     }
+   }
+    return true;
+ }
+  //filter the working array
+ arr = arr.filter(destroyThis);
+ return arr;
+}
+
+destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3);
