@@ -1,0 +1,16 @@
+
+function palindrome(str) {
+  // remove non-alphanumerical symbols
+  var temp = str.replace(/[_\W]+/g, '').toLowerCase();
+  //create reversed string
+  var str2 = temp.split("").reverse().join("");
+  
+  //check if the string is a palindrome 
+  if (str2.match(temp)){
+     return true;
+  } else {
+    return false;
+  }
+}
+
+palindrome("A man, a plan, a canal. Panama");
