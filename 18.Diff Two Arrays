@@ -1,0 +1,16 @@
+function diffArray(arr1, arr2) {
+  //concat 2 array to make a reference array
+  var newArr = arr1.concat(arr2);
+  
+  //a callback function to compare each element of newArr with arr1 and arr2
+  function check(item) {
+    if (arr1.indexOf(item) === -1 || arr2.indexOf(item) === -1) {
+      return item;
+    }
+  }
+  
+  //call the function and return the result
+  return newArr.filter(check);
+}
+
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
